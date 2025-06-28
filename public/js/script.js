@@ -56,7 +56,8 @@ socket.on("receive-location", (data) => {
         // If no, create a new marker and add it to the map
         markers[id] = L.marker([latitude, longitude])
             .addTo(map)
-            .bindPopup("User: " + id) // Add a popup with the user's ID
+            .bindPopup(`<img src="https://api.dicebear.com/8.x/thumbs/svg?seed=${id}" width="50" height="50" />`)
+ // Add a popup with the user's ID
             .openPopup(); // Open the popup immediately (optional)
     }
 });
